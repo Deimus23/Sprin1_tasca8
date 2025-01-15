@@ -12,14 +12,14 @@ public class Main {
         List<String> strings = words.stream()
                .filter(item -> item instanceof String)
                 .map(item -> (String) item)
-                .sorted((a, b) -> Integer.compare(b.length(), a.length())) // Orden inverso
+                .sorted((a, b) -> Integer.compare(b.length(), a.length()))
                 .collect(Collectors.toList());
 
 
         List<Integer> numbers = words.stream()
                 .filter(item -> item instanceof Integer)
                 .map(item -> (Integer) item)
-                .sorted(Comparator.reverseOrder()) // Orden inverso
+                .sorted(Comparator.reverseOrder())
                 .collect(Collectors.toList());
 
         List<Object> sortedList = new ArrayList<>();
